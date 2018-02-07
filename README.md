@@ -67,6 +67,13 @@ if (isset($_POST['frontendLogger'])) {
 }
 ````
 
+**Making some error on some page (calling undefined function)**
+````HTML
+<script>
+	test () // This function is undefined
+</script>
+````
+
 **Result**
 ````
 [3-1-2018 23:12:27] - Message: Uncaught ReferenceError: test is not defined - URL: http://somepage.com - File: http://somepage.com/test.js - Line: 1 - Browser:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36
