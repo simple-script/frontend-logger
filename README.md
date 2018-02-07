@@ -70,7 +70,7 @@ if (isset($_POST['frontendLogger'])) {
 **Making some error on some page (calling undefined function)**
 ````HTML
 <script>
-	test () // This function is undefined
+	test(); // This function is undefined
 </script>
 ````
 
