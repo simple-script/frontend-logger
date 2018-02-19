@@ -62,9 +62,8 @@ if (isset($_POST['frontendLogger'])) {
     }
 
     if ($frontendLoggerData['module'] === 'simpleErrorLogger' && is_array($frontendLoggerData['data'])) {
-        $this->simpleFrontendErrorLogger->process($frontendLoggerData['data']);
         $data = implode(PHP_EOL, $frontendLoggerData['data']) . PHP_EOL;
-        file_put_contents('path/to/file.log', $data, FILE_APPEND);
+        file_put_contents('path/to/file.log', $data, FILE_APPEND | LOCK_EX);
     }
 }
 ````
